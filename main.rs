@@ -17,7 +17,7 @@ fn variables(){
     println!("The variable num is defined as {}.", num);
     println!("Num is immutable so its value can't be changed.");
     //num = 100; //all variables are naturally immutable, uncomment this line to crash the function
-    let mut another_num = 100; //mut keyword is used to make a variable immutable
+    let mut another_num = 100; //mut keyword is used to make a variable mutable
     println!("The variable another_num is currently defined as {}.", another_num);
     another_num = 30;//Note that this doesn't crash the program
     println!("The variable another_num is now defined as {}. Note that it was able to be changed because another_num was defined to be mutable.", another_num);
@@ -96,6 +96,26 @@ struct Bank_account {
     deposit_amount: i32
 }
 
+//The trait bank is written below. This is the basis for abstraction in rust
+trait bank{
+    //withdraw
+    fn withdraw(&mut self, amount: i32) -> i32;
+    //deposit
+    fn deposit(&mut self, amount: i32) ->  i32;
+}
+
+//implements the trait bank for Bank_account
+impl bank for Bank_account {
+    fn withdraw(&mut self, amount: i32) -> i32{
+        self.deposit_amount = self.deposit_amount - amount;
+        return self.deposit_amount;
+    }
+    fn deposit(&mut self, amount: i32) ->i32{ //self must be defined as mutable
+        self.deposit_amount = self.deposit_amount + amount;
+        return self.deposit_amount;
+    }
+}
+//Learn to use structures in Rust
 fn structures(){
     let account = Bank_account {name: "Jerry".to_string(), deposit_amount: 1000 };
     println!("{} has {} in total deposits.",account.name, account.deposit_amount);
@@ -104,9 +124,15 @@ fn structures(){
     println!("{} has {} in total deposits.",acc.name, acc.deposit_amount);
     acc.name = "Jerry".to_string();//changes name instance variable
     println!("{} has {} in total deposits.",acc.name, acc.deposit_amount);
+    acc.deposit(1000); //adding 1000 to the account
+    println!("{} has {} in total deposits.",acc.name, acc.deposit_amount);
+    acc.withdraw(1000); //taking away 1000 from the account
+    println!("{} has {} in total deposits.",acc.name, acc.deposit_amount);
 
 }
 
+
+//Rust will run the code in the main file similar to what java does
 fn main(){
     //uncomment these to begin learnination
     //hello_world();
@@ -117,6 +143,6 @@ fn main(){
     //forever_loop();
     //fact_while_loop(5);
     //fact_for_loop(5);
-    structures()
+    //structures()
 
 }
