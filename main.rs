@@ -48,7 +48,7 @@ fn primitives(){
     let x = 30; //will default to a 32-bit integer
     let y = 30.1; //will default to a 32-bit float
     let mut z: u64 = 3; //set to a 64-bit unsigned integer
-    //z = -1; //this will crash the program because z is an unsigned integer
+    //z = -1; //delete the commenting to see this crash the program because z is an unsigned integer
 }
 
 //Learn to use conditionals
@@ -90,6 +90,23 @@ fn fact_for_loop(num: i32){
     println!("Answer is {}", answer);
 }
 
+//Learn to use structs as a way to create custom data structures; similar to classes in Java
+struct Bank_account {
+    name: String,//note each variables type
+    deposit_amount: i32
+}
+
+fn structures(){
+    let account = Bank_account {name: "Jerry".to_string(), deposit_amount: 1000 };
+    println!("{} has {} in total deposits.",account.name, account.deposit_amount);
+    //account.name = "Ivan".to_string(); //this will crash the program because account is immutable
+    let mut acc = Bank_account {name: "Ivan".to_string(), deposit_amount: 0 };
+    println!("{} has {} in total deposits.",acc.name, acc.deposit_amount);
+    acc.name = "Jerry".to_string();//changes name instance variable
+    println!("{} has {} in total deposits.",acc.name, acc.deposit_amount);
+
+}
+
 fn main(){
     //uncomment these to begin learnination
     //hello_world();
@@ -100,5 +117,6 @@ fn main(){
     //forever_loop();
     //fact_while_loop(5);
     //fact_for_loop(5);
+    structures()
 
 }
