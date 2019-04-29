@@ -1,0 +1,134 @@
+<html>
+<head>
+<title>Rust Tutorial</title>
+</head>
+<body>
+  <h1>Rust by Team Rusty ToeNails: Ivan Zhang and Jerry Ye</h1>
+  <h2>About Rust</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Rust_programming_language_black_logo.svg/1200px-Rust_programming_language_black_logo.svg.png" alt="Rust!!!" width="600" height="600">
+  <ul>
+    <li>Started on July 7th 2010</li>
+    <li>Designed by Graydon Hoare (Twitter: <a href="https://twitter.com/graydon_pub">@graydon_pub</a>, Reddit: <a href="https://www.reddit.com/user/graydon2">graydon2</a>) at Mozilla Research (which also created Firefox)</li>
+    <li>Developed by the Rust Project</li>
+    <li>Incorporates aspects of C++, C#, Swift, Haskell, and Scheme among other languages</li>
+    <li>Rust was the most loved language according to Stack Overflow's <a href="https://insights.stackoverflow.com/survey/2016/#technology-most-loved-dreaded-and-wanted">2016</a>, <a href="https://insights.stackoverflow.com/survey/2017#most-loved-dreaded-and-wanted">2017</a>, and <a href="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-languages">2018</a> Developer Survey </li>
+    <li> In brief: A systems-level programming language that is incredibly fast and prevents segfaults.</li>
+  </ul>
+  <h2>What is a Systems-Level Programming Language?</h2>
+  <ul>
+    <li>Language that is used for writing system software rather than application software
+      <ul>
+        <li>System software is designed to operate and control computer hardware and for running application software.</li>
+      </ul>
+    </li>
+    <li>More direct access to physical hardware of machine</li>
+    <li>Other examples: C, C++, Pascal, and Go</li>
+  </ul>
+  <img src="https://jaxenter.com/wp-content/uploads/2017/09/energy-efficient-languages.png" alt="Diagram" width="400" height="400">
+  <img src="https://cdn-images-1.medium.com/max/1600/1*NHrM0xHRqez1S5URP7sOoQ.png" alt="Diagram" width="400" height="400">
+  <img src="https://jaxenter.com/wp-content/uploads/2017/09/energy-efficient-languages-2-1024x491.png" alt="Diagram" width="400" height="400">
+  <h2>Syntax</h2>
+  <ul>
+    <li>
+      <h3>Hello World Function</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+    <li>
+      <h3>Variables</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser-1?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+    <li>
+      <h3>Functions</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser-2?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+    <li>
+      <h3>Primatives</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser-3?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+    <li>
+      <h3>Conditionals</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser-4?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+    <li>
+      <h3>Forever Loop</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser-5?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+    <li>
+      <h3>While Loops</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser-6?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+    <li>
+      <h3>For Loops</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser-7?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+    <li>
+      <h3>Structures</h3>
+      <iframe height="400px" width="100%" src="https://repl.it/@IvanZhang2/LoyalCourteousBrowser-8?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+    </li>
+  </ul>
+
+  <h2>Advantages</h2>
+    <li>Memory Safety Without Garbage Collection
+      <ul>
+        <li>Garbage Collection: Form of automatic data management, but takes a significant proportion of processing time and can have an influence on performance.</li>
+        <li>Garbage Collector: a program that automatically removes unwanted data held temporarily in memory during processing.</li>
+        <li>Rust data pointers are converted to C data pointers without the need for additional tagging or data checks.</li>
+      </ul>
+    </li>
+    <li>Zero Cost Abstraction
+      <ul>
+        <li>There are no run-time or memory costs that come with doing abstraction in Rust.</li>
+        <li>Java has a small cost of abstraction.</li>
+        <li>Usually isn’t relevant but is taken advantage of with Machine Learning.</li>
+      </ul>
+    </li>
+  <h2>Disadvantages</h2>
+    <li>Verbosity
+      <ul>
+        <li>In short: A lot more typing.</li>
+        <li>Python
+          <br>
+          <code>words = s.split()</code>
+        </li>
+        <li>Rust
+          <br>
+          <code>
+            let words: Vec<_> = s.split_whitespace().map(String::from).collect();
+          </code>
+        </li>
+        <li>Usually isn’t relevant but is taken advantage of with Machine Learning.</li>
+      </ul>
+    </li>
+    <li>Underdeveloped Community
+      <ul>
+        <li>Rust hasn't had enough time to develop an ecosystem of tools and libraries that other languages might have.
+          <ul>
+            <li>One package manager</li>
+            <li>Only a couple of pre-1.0 web servers</li>
+            <li>No dedicated IDE</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  <h2>Where is Rust used?</h2>
+    <ul>
+      <li><a href="https://www.dropbox.com/">Dropbox</a></li>
+      <li><a href="https://www.parity.io/">parity</a></li>
+      <li><a href="https://servo.org/">Servo</a></li>
+      <li><a href="https://discordapp.com/">Discord</a></li>
+    </ul>
+  <h2>Resources to Learn Rust</h2>
+    <ul>
+      <li>Presentation Code (<a href="https://github.com/ivzhang1/Rust-Presentation">https://github.com/ivzhang1/Rust-Presentation</a>)</li>
+      <li>Rust Documentation (<a href="https://doc.rust-lang.org/">https://doc.rust-lang.org/</a>)</li>
+      <li>The Rust Programming Language Book (<a href="https://doc.rust-lang.org/book/index.html">https://doc.rust-lang.org/book/index.html</a>)</li>
+      <li>Rust Learn By Example (<a href="https://doc.rust-lang.org/rust-by-example/index.html">https://doc.rust-lang.org/rust-by-example/index.html</a>)</li>
+      <li>Rust Community (<a href="https://www.rust-lang.org/community">https://www.rust-lang.org/community</a>)</li>
+      <li>Rustlings (<a href="https://github.com/rust-lang/rustlings">https://github.com/rust-lang/rustlings</a>)</li>
+      <li>New Rustacean Podcast (<a href="https://newrustacean.com/">https://newrustacean.com/</a>)</li>
+      <li>Rust Tutorials on Medium (<a href="https://medium.com/learning-rust">https://medium.com/learning-rust</a>)</li>
+      <li>Others (<a href="https://github.com/ctjhoa/rust-learning">https://github.com/ctjhoa/rust-learning</a>)</li>
+    </ul>
+
+</body>
+</html>
